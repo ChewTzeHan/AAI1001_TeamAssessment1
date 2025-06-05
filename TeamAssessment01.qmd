@@ -1,6 +1,8 @@
 ---
 title: "TeamAssessment01"
 format: html
+embed-resources: true
+number-sections: true
 ---
 
 
@@ -8,7 +10,7 @@ format: html
 
 # R TASK
 
-## Creating and Visualizing swish()
+## Creating and Visualizing <code style="color: purple; font-weight: bold;">swish()</code>
 
 ```{r}
 
@@ -35,7 +37,7 @@ ggplot(tbl_swish, aes(x, y)) +
   labs(x = "x", y = "swish(x)")
 ```
 
-## Visualizing the Gradient of swish()
+## Visualizing the Gradient of <code style="color: purple; font-weight: bold;">swish()</code>
 
 
 ```{r}
@@ -61,11 +63,12 @@ ggplot(tbl_swish, aes(x, y)) +
   labs(x = "x", y = "d_swish(x)")
 ```
 
-## Comparison of swish() and derivative swish()
+### Comparison of <code style="color: purple; font-weight: bold;">swish()</code> and <code style="color: purple; font-weight: bold;">d_swish()</code> {-}
 
 The Swish activation function and the derivative serve different roles for training neural networks. The Swish function is used in the forward pass to introduce non-linearity to allow models to learn complex patterns. The smoother and non-monotonic shape often leads to better training performance than traditional functions like ReLU, especially in deeper networks. The derivative of Swish is instead used during the backward pass for gradient calculation. It requires more computation due to additional sigmoid evaluations and multiplications. However, the benefits in training stability and accuracy outweigh the reduced computational efficiency. Thus, Swish is better for having good learning performance, while the derivative provides more effective backpropagation.
 
-## Toy Examples Calling swish() and relu()
+## Toy Examples Calling <code style="color: purple; font-weight: bold;">swish()</code> and <code style="color: purple; font-weight: bold;">relu()</code>
+
 
 ```{r}
 #| eval: true
@@ -83,7 +86,7 @@ activated_vector <- swish(random_vector)
 round(random_vector, 2)
 round(activated_vector, 2)
 ```
-### Relu function
+### Relu function {-}
 
 ```{R}
 
@@ -95,7 +98,7 @@ relu_activated_vector <- relu(random_vector)
 round(activated_vector, 2)
 round(relu_activated_vector, 2)
 ```
-## Explanation
+### Explanation {-}
 Yes, this example supports the claim that Swish helps avoid dead neurons. Swish allows negative inputs to produce small non-zero outputs, which helps keep neurons active and trainable, especially during backpropagation. Whereas RELU will output zero for all negative inputs, effectively "killing" off those neurons and preventing them from learning. Thus, Swish allows for more neurons to remain active and contribute to learning, which can lead to better model performance.
 
 
