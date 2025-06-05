@@ -132,7 +132,7 @@ $$
 
 # Reflection on the Use of GenAI
 
-For Assessment 1, we used ChatGPT as our GenAI tool to assist us with the tasks. 
+For Assessment 1, we used ChatGPT as our main GenAI tool to assist us with the tasks. We additionally used Claude and Deepseek to cross reference code to ensure that the code provided was accurate and functional. A few examples of where we used GenAI tools are:
 
 - For Task 1.3, we were asked to clean the data to be imported. After examining it, we decided to run the file through ChatGPT to help us inspect for any errors and raise the issues to us. This allowed to locate which rows or columns needed to be prepped in order. 
 
